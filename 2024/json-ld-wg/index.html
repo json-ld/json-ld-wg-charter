@@ -76,7 +76,7 @@
       <!-- replace DRAFT with PROPOSED when the AC review starts -->
       <!-- delete PROPOSED after AC review completed -->
 
-      <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/wg/json-ld">JSON-LD Working Group</a> is to maintain and extend the <a href="https://www.w3.org/groups/wg/json-ld/publications">family of JSON-LD 1.1 Recommendations</a> and related Working Group Notes.</p>
+      <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/wg/json-ld">JSON-LD Working Group</a> is to maintain and extend the <a href="https://www.w3.org/groups/wg/json-ld/publications">family of JSON-LD Recommendations</a> and related Working Group Notes.</p>
 
       <div class="noprint">
         <p class="join"><a href="https://www.w3.org/groups/wg/json-ld/join">Join the JSON-LD Working Group.</a></p>
@@ -97,7 +97,7 @@
               Charter Status
             </th>
             <td>
-              See the <a href="https://www.w3.org/groups/wg/json-ld/charters">group status page</A> and <a href="#history">detailed change history</a>.
+              See the <a href="https://www.w3.org/groups/wg/json-ld/charters">group status page</a> and <a href="#history">detailed change history</a>.
             </td>
           </tr>
           <tr id="Duration">
@@ -153,14 +153,14 @@
           Use of JSON-LD has grown and expanded over the last decade (since it's first publication as a
           <a href="https://www.w3.org/TR/json-ld-api1/">W3C Recommendation in 2014</a>).
           JSON-LD remains a popular choice for encoding <abbr title="Seach Engine Optimization">SEO</abbr>-focused
-          structured data in Web pages. JSON-LD has also become a foundational format for social media
+          structured data in Web pages using <a href="https://schema.org">schema.org</a>. JSON-LD has also become a foundational format for social media
           (<a href="https://www.w3.org/TR/activitystreams-core/">ActivityStreams</a>),
           Internet of Things data (<a href="https://www.w3.org/TR/wot-thing-description11/">Web of Things Description</a>),
           <a href="https://www.w3.org/TR/vc-data-model-2.0/">Verifiable Credentials</a>, and Software Bill of Materials
           (<a href="https://spdx.github.io/spdx-spec/v3.0.1/serializations/#serialization-in-json-ld">SPDX</a>).
         </p>
 
-        <p>This growth in the applied use of JSON-LD has resulted in community interest in additional expressions of
+        <p>This growth in the applied use of JSON-LD has led to a community interest in additional expressions of
           JSON-LD's underlying Linked Data structure in other formats. YAML-LD has been created by the
           <a href="https://www.w3.org/community/json-ld/">JSON for Linking Data Community Group</a> for easing human
           authoring and providing a clearer path for using Linked Data applied to popular YAML-based documents such as
@@ -179,21 +179,26 @@
         </p>
 
         <p>
-          The goal of this new more inclusively focused JSON-LD WG is to meet the demand of the broader
+          The goal of this new, more inclusively focused JSON-LD WG is to meet the demand of the broader
           JSON-LD community by strengthening the foundational JSON-LD specifications, growing the family 
           of JSON-LD related formats which orbit around the JSON-LD processing model, and specifying improved
           context retrieval methods for greater clarity and stability.
         </p>
+
       </div>
 
       <section id="scope" class="scope">
         <h2>Scope</h2>
 				<p>
-					The Working Group will evolve the recommendations defining the JSON-LD specifications (i.e., <a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a>, <a href="https://www.w3.org/TR/json-ld11-api/">JSON-LD 1.1 API</a>, <a href="https://www.w3.org/TR/json-ld11-framing/">JSON-LD 1.1 Framing</a>) by handling Errata and by adding requested features as recorded on the 
-          group's <a href="https://github.com/orgs/w3c/projects/84">Project Management Page</a>. In order to handle these, 
-          the Working Group will issue new versions of these recommendations, possibly with new features,
-          in order to render future usage and evolutions easier. In particular, the Working Group will handle two important
-          security related issues:
+					The Working Group will evolve the recommendations defining the JSON-LD specifications 
+          (i.e., <a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a>, 
+          <a href="https://www.w3.org/TR/json-ld11-api/">JSON-LD 1.1 API</a>, 
+          <a href="https://www.w3.org/TR/json-ld11-framing/">JSON-LD 1.1 Framing</a>) by handling Errata 
+          and by adding requested features as recorded on the group's 
+          <a href="https://github.com/orgs/w3c/projects/84">Project Management Page</a>. In order to handle these, 
+          the Working Group will issue new versions of these recommendations, with possibly with new features,
+          in order to render future usage and evolutions easier. In particular, the Working Group will handle 
+          two important security related problems:
         </p>
 
 
@@ -201,14 +206,15 @@
           <li>[Placeholder: safe mode]</li>
           <li>[Placeholder: context file hash, and related stuff]</li>
         </ol>
-<!-- 
-          with the features introduced by <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>
-          in addition to open Errata and requested features
-          as noted on the groups <a href="https://github.com/orgs/w3c/projects/84">Project Management Page</a>.
-          Together, these specifications provide a JSON format for Linked Data,
-          enabling interoperation in a way which is familiar to and usable by software engineers.
--->
-					<!-- Note that the JSON-LD APIs are not browser specific; while appropriate for use within browsers, they are not limited to such use, and there is no requirement for browsers to implement them natively. -->
+
+        <!-- Note that the JSON-LD APIs are not browser specific; while appropriate for use within browsers, they are not limited to such use, and there is no requirement for browsers to implement them natively. -->
+
+        <p>
+          The development of the 1.2 versions of the JSON-LD specification will follow the principle of
+          backward compatibility. This means that any valid JSON-LD 1.1 document will remain valid for 
+          JSON-LD 1.2, and the RDF graphs generated by the 1.1 and 1.2 versions of the JSON-LD API 
+          specifications, respectively, will be <a href="https://www.w3.org/TR/rdf11-concepts/#graph-isomorphism">isomorphic</a>.
+        </p>
 
         <p>
           The Working Group will also develop new Recommendation Track deliverables, based on work incubated by the <a href="https://www.w3.org/community/json-ld/">JSON for Linking Data Community Group</a>,
@@ -220,23 +226,16 @@
         </p>
 
         <p>
-          Finally, the Working Group will start working on the introduction of the new <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>
-          concepts (primarily triple terms), into the JSON-LD syntax, API, and Framing. The final goal is to have, eventually, an updated version of JSON-LD fully compatible with the upcoming RDF 1.2 version but also with the concepts introduced in 
-          <a href="https://www.w3.org/TR/rdf12-turtle/">RDF 1.2 Turtle</a> (e.g., annotation syntax). This will be done in a strong 
-          cooperation with the <a href="https://www.w3.org/groups/wg/rdf-star">RDF &amp; SPARQL Working Group</a>. 
+          Finally, the Working Group will start working on the introduction of the new 
+          <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>
+          concepts (primarily triple terms), into the JSON-LD syntax, API, and Framing. The final goal is to 
+          have, eventually, a version of JSON-LD fully compatible with the upcoming RDF 1.2
+          version, including the concepts introduced in 
+          <a href="https://www.w3.org/TR/rdf12-turtle/">RDF 1.2 Turtle</a> (e.g., annotation syntax).
+          This will be done in a strong cooperation with the 
+          <a href="https://www.w3.org/groups/wg/rdf-star">RDF &amp; SPARQL Working Group</a>. 
         </p>
 
-
-        <!-- <section id="section-feature-updates">
-          <h3 id="in-scope">In Scope</h3>
-            <p>In addition to Errata and synchronization with the RDF & SPARQL Working Group, features tracked on the
-              <a href="https://github.com/orgs/w3c/projects/84">Project Management Page</a>
-              are in-scope for updates to the core JSON-LD specifications.</p>
-            <p>The Working Group will also consider <a href="https://www.w3.org/2021/Process-20211102/#allow-new-features">allowing new features</a> in
-              these recommendations, according to <a href="https://www.w3.org/2021/Process-20211102/#revised-rec-features">Section 6.3.11.4 of the W3C
-              process</a>, in order to render future evolutions easier.</p>
-        </section>
- -->
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
             <p>The following features are out of scope, and will not be addressed by this Working Group.</p>
@@ -344,8 +343,8 @@
           </h3>
           <p>Depending on the incubation progress, interest from multiple implementers, and the consensus
             of the Group participants, the Working Group may adopt the following documents
-             as Rec-track specifications, all related to the compatibility with 
-             <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>:
+             as Rec-track specifications, all related to the compatibility of JSON-LD with 
+             <a href="https://www.w3.org/TR/rdf12-concepts">RDF&nbsp;1.2</a>:
             </p>
           <dl>
             <dt id="json-ld-13" class="spec">JSON-LD 1.3</dt>
@@ -727,7 +726,8 @@
 
     <footer>
       <address>
-        <a href="mailto:pierre-antoine@w3.org">Pierre-Antoine Champin</a>
+        <a href="mailto:pierre-antoine@w3.org">Pierre-Antoine Champin</a> and 
+        <a href="mailto:ivan@w3.org">Ivan Herman</a>
       </address>
 
       <p class="copyright">Copyright © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
