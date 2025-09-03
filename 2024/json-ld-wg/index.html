@@ -203,8 +203,30 @@
 
 
         <ol>
-          <li>[Placeholder: safe mode]</li>
-          <li>[Placeholder: context file hash, and related stuff]</li>
+          <li>
+            JSON-LD has become a common structural foundation for a wide range of data models. Some of 
+            those environments have more restrictive requirements on how unmapped terms should be treated (i.e., 
+            when JSON keys are present only in the document, but not in the context definition). The current 
+            JSON-LD API stipulates that the unknown term is silently ignored. The Working Group will specify 
+            a "safe mode", that will detect these situations and cause the processing to fail. This mode is 
+            already available in some JSON-LD API implementations, such as 
+            <a href="https://github.com/digitalbazaar/jsonld.js?tab=readme-ov-file#safe-mode">jsonld.js</a> and 
+            <a href="https://dotnetrdf.org/2025-07-03-dn4-3-4-0-released/#:~:text=This%20release%20also%20introduces%20a,rather%20than%20silently%20ignoring%20them.">dotNetRDF</a>, 
+            and is especially useful if the resulting RDF Graph is to be canonicalized.
+          </li>
+          <li>
+            External (i.e., non-inline) JSON-LD context files are identified using URIs. This is a common
+            pattern across many technologies that has, at times, confused implementers who 
+            expect that they should always use these identifiers as locators, and dereference them. This
+            assumption can create risks and vulnerabilities. 
+            The Working Group intends to address this problem through education (i.e., more 
+            specification text) and exploring options such as the addition of a hash fragment to be used 
+            with the application/ld+json media type responses. This fragment conveys a content hash which 
+            may be used by implementations to further confirm and handle the intentions of the original 
+            document author. (This has already been discussed by the Working Group, see, for example,
+            the open issues <a href="https://github.com/w3c/json-ld-syntax/issues/436">436</a> or 
+            <a href="https://github.com/w3c/json-ld-syntax/issues/422">422</a>.)
+          </li>
         </ol>
 
         <!-- Note that the JSON-LD APIs are not browser specific; while appropriate for use within browsers, they are not limited to such use, and there is no requirement for browsers to implement them natively. -->
