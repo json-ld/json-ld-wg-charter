@@ -206,7 +206,7 @@
           <li>
             JSON-LD has become a common structural foundation for a wide range of data models. Some of 
             those environments have more restrictive requirements than others on how unmapped terms should be treated (i.e., 
-            when JSON keys are present only in the document, but not in the context definition). The current 
+            when JSON keys present in the document have no term definition in the context). The current 
             JSON-LD API stipulates that the unknown term is silently ignored. The Working Group will specify 
             a "safe mode", that will detect these situations and cause the processing to fail. This mode is 
             already available in some JSON-LD API implementations, such as 
@@ -218,9 +218,9 @@
             External (i.e., non-inline) JSON-LD context files are identified using URIs. This is a common
             pattern across many technologies that has, at times, confused implementers who 
             expect that they should always use these identifiers as locators, and dereference them. This
-            assumption can create risks and vulnerabilities. 
+            assumption can create risks and vulnerabilities that have been documented, but also often overlooked, in previous versions of JSON-LD.
             The Working Group intends to address this problem through education (i.e., more 
-            specification text) and exploring options such as the addition of a hash fragment to be used 
+            specification text) and exploration of options such as the addition of a hash fragment to be used 
             with the application/ld+json media type responses. This fragment conveys a content hash which 
             may be used by implementations to further confirm and handle the intentions of the original 
             document author. (This has already been discussed by the Working Group, see, for example,
